@@ -9,10 +9,13 @@ const publish = require('./route/publish')
 
 const app = express()
 
+app.use(express.static('../dist'));
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(cookieParser())
+// app.use('/dist',express.static('public'))
+
 app.all('*', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Methods', 'GET, POST')
@@ -22,5 +25,6 @@ app.all('*', (req, res, next) => {
 })
 app.use('/hongbao', hongbao)
 app.use('/publish', publish)
+
 
 module.exports = app

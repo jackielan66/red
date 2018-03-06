@@ -14,7 +14,7 @@ const http = require('http')
 
 const port = normalizePort(process.env.PORT || '8080')
 app.set('port', port)
-// console.log(port,'port')
+console.log(port,'port')
 
 /**
  * Create HTTP server.
