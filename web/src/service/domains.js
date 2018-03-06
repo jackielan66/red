@@ -14,5 +14,5 @@ export default [
   'https://hbapi.moexian.com',
   // W
   'http://45.77.165.37:3007',
-  'http://localhost:9000'
+  'http://47.96.15.69:9000'
 ]
